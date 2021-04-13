@@ -1,0 +1,10 @@
+<ul class="collection with-header">
+  <li class="collection-header"><h4>Top 5</h4></li>
+  <li class="collection-item"
+  *ngFor="let video of videos"
+    (click)="selectedVideo = video"
+    [class.highlight]="selectedVideo?.id === v.id">
+    <h4>{{ video.title }}</h4>
+    <p>{{ video.author }}</p>
+  </li>
+</ul>
